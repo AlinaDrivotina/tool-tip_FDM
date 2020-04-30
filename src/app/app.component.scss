@@ -1,0 +1,77 @@
+.tooltip-example-boxes {
+    text-align: center;
+    padding: 0 50px;
+}
+//style for boxes
+[appTooltip] {
+    display: inline-block;
+    margin: 50px 20px;
+    width: 180px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+//global styles for tooltip
+.ng-tooltip {
+    position: absolute;
+    max-width: 200px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    padding: 5px 8px;
+    background: black;
+    border-radius: 7px;
+    z-index: 1000;
+    opacity: 0;
+}
+.ng-tooltip-right { // tooltip for left-side menu
+    position: absolute;
+    max-width: 300px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    padding: 5px 8px;
+    background:  rgb(79, 93, 117);
+    border-radius: 7px;
+    z-index: 1000;
+    opacity: 0;
+}
+.ng-tooltip:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+}
+.ng-tooltip-top:after { //arrows
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-color: black transparent transparent transparent;
+}
+.ng-tooltip-bottom:after {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-color: transparent transparent black transparent;
+}
+.ng-tooltip-left:after {
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-color: transparent transparent transparent black;
+}
+.ng-tooltip-right:after {
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-color: transparent  rgb(79, 93, 117) transparent transparent;
+}
+.ng-tooltip-show {
+    opacity: 1;
+}
